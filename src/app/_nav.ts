@@ -37,79 +37,29 @@ export const navItems: NavData[] = [
   },
   {
     title: true,
-    name: 'Components'
+    name: 'Navigation'
   },
   {
     name: 'Predictive Model',
-    url: '/base',
-    icon: 'icon-puzzle',
+    url: '/model',
+    icon: 'icon-layers',
     children: [
       {
-        name: 'Cards',
-        url: '/base/cards',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Carousels',
-        url: '/base/carousels',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Collapses',
-        url: '/base/collapses',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Forms',
-        url: '/base/forms',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Pagination',
-        url: '/base/paginations',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Popovers',
-        url: '/base/popovers',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Progress',
-        url: '/base/progress',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Switches',
-        url: '/base/switches',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Tables',
-        url: '/base/tables',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Tabs',
-        url: '/base/tabs',
-        icon: 'icon-puzzle'
-      },
-      {
-        name: 'Tooltips',
-        url: '/base/tooltips',
-        icon: 'icon-puzzle'
+        name: 'Model Data Input',
+        url: '/model/forms',
+        icon: 'icon-calculator'
       }
     ]
   },
   {
     name: 'Analytics',
     url: '/charts',
-    icon: 'icon-pie-chart',
+    icon: 'icon-chart',
     children: [
       {
-        name: 'Buttons',
-        url: '/buttons/buttons',
-        icon: 'icon-cursor'
+        name: 'Placeholder',
+        url: '',
+        icon: 'icon-graph'
       }
     ]
   }
