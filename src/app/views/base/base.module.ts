@@ -5,7 +5,7 @@ import { NgModule } from '@angular/core';
 
 
 // Forms Component
-import { FormsComponent } from './forms.component';
+import { InputComponent } from './input.component';
 
 // Tabs Component
 import { TabsModule } from 'ngx-bootstrap/tabs';
@@ -50,7 +50,7 @@ import { BaseRoutingModule } from './base-routing.module';
     TooltipModule.forRoot()
   ],
   declarations: [
-    FormsComponent
+    InputComponent
   ]
 })
 export class BaseModule { }

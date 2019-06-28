@@ -46,7 +46,7 @@ export const navItems: NavData[] = [
     children: [
       {
         name: 'Model Data Input',
-        url: '/model/forms',
+        url: '/model/input',
         icon: 'icon-calculator'
       }
     ]
@@ -58,7 +58,7 @@ export const navItems: NavData[] = [
     children: [
       {
         name: 'Placeholder',
-        url: '',
+        url: '  ',
         icon: 'icon-graph'
       }
     ]

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { FormsComponent } from './forms.component';
+import { InputComponent } from './input.component';
 
 const routes: Routes = [
   {
@@ -15,10 +15,10 @@ const routes: Routes = [
         redirectTo: 'Dashboard'
       },
       {
-        path: 'forms',
-        component: FormsComponent,
+        path: 'input',
+        component: InputComponent,
         data: {
-          title: 'Forms'
+          title: 'Input'
         }
       }
     ]
