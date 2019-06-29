@@ -23,4 +23,8 @@ export class InputComponent {
     this.iconCollapse = this.isCollapsed ? 'icon-arrow-down' : 'icon-arrow-up';
   }
 
+  onSubmit(): void {
+    alert("data sent");
+  }
+
 }
