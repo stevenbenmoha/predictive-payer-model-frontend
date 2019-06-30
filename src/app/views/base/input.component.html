@@ -11,7 +11,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="channel">Channel</label>
               <div class="col-md-7">
-                <select id="channel" name="channel" class="form-control" required [(ngModel)]="model.channel" #name="ngModel">
+                <select id="channel" name="channel" class="form-control form-control-sm" required [(ngModel)]="model.channel" #name="ngModel">
                   <option value="Commercial">Commercial</option>
                   <option value="Medicare Part D">Medicare Part D</option>
                   <option value="Managed Medicaid">Managed Medicaid</option>
@@ -23,7 +23,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="customer">Customer</label>
               <div class="col-md-7">
-                <select id="customer" name="customer" class="form-control" required [(ngModel)]="model.customer" #name="ngModel">
+                <select id="customer" name="customer" class="form-control form-control-sm" required [(ngModel)]="model.customer" #name="ngModel">
                   <option value="CVS Caremark">CVS Caremark</option>
                   <option value="Express Scripts Senior Care">Express Scripts Senior Care</option>
                   <option value="Optum Rx">Optum Rx</option>
@@ -41,7 +41,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="segment">Segment/Plan</label>
               <div class="col-md-7">
-                <select id="segment" name="segment" class="form-control" required [(ngModel)]="model.segment" #name="ngModel">
+                <select id="segment" name="segment" class="form-control form-control-sm" required [(ngModel)]="model.segment" #name="ngModel">
                   <option value="FEP">FEP</option>
                   <option value="Aetna">Aetna</option>
                   <option value="Template">Template</option>
@@ -61,7 +61,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="brandOrManufacturer">Brand or Manufacturer</label>
               <div class="col-md-7">
-                <select id="brandOrManufacturer" name="brandOrManufacturer" class="form-control" required [(ngModel)]="model.brandOrManufacturer" #name="ngModel">
+                <select id="brandOrManufacturer" name="brandOrManufacturer" class="form-control form-control-sm" required [(ngModel)]="model.brandOrManufacturer" #name="ngModel">
                   <option value="Brand">Brand</option>
                   <option value="Manufacturer">Manufacturer</option>
                 </select>
@@ -70,7 +70,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="tier">Tier</label>
               <div class="col-md-7">
-                <select id="tier" name="tier" class="form-control" required [(ngModel)]="model.tier" #name="ngModel">
+                <select id="tier" name="tier" class="form-control form-control-sm" required [(ngModel)]="model.tier" #name="ngModel">
                   <option value="Tier 1 - Generic">Tier 1 - Generic</option>
                   <option value="Tier 2 - Preferred">Tier 2 - Preferred</option>
                   <option value="Tier 3 - Non-Preferred">Tier 3 - Non-Preferred</option>
@@ -81,7 +81,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="placement">Placement</label>
               <div class="col-md-7">
-                <select id="placement" name="placement" class="form-control" required [(ngModel)]="model.placement" #name="ngModel">
+                <select id="placement" name="placement" class="form-control form-control-sm" required [(ngModel)]="model.placement" #name="ngModel">
                   <option value="1 of 1">1 of 1</option>
                   <option value="1 of 2">1 of 2</option>
                   <option value="1 of 3">1 of 3</option>
@@ -93,14 +93,14 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="formulary">Formulary</label>
               <div class="col-md-7">
-                <textarea id="formulary" name="formulary" rows="2" class="form-control"
+                <textarea id="formulary" name="formulary" rows="2" class="form-control form-control-sm"
                   placeholder="Please enter formulary" required [(ngModel)]="model.formulary" #name="ngModel"></textarea>
               </div>
             </div>
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="restriction">Restriction</label>
               <div class="col-md-7">
-                <select id="restriction" name="restriction" class="form-control" required [(ngModel)]="model.restriction" #name="ngModel">
+                <select id="restriction" name="restriction" class="form-control form-control-sm" required [(ngModel)]="model.restriction" #name="ngModel">
                   <option value="Unrestricted">Unrestricted</option>
                   <option value="Prior Authorization">Prior Authorization</option>
                   <option value="1 Step Edit">1 Step Edit</option>
@@ -112,7 +112,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="product">Product</label>
               <div class="col-md-7">
-                <select id="product" name="product" class="form-control" required [(ngModel)]="model.product" #name="ngModel">
+                <select id="product" name="product" class="form-control form-control-sm" required [(ngModel)]="model.product" #name="ngModel">
                   <option value="0">Please select product</option>
                   <option value="Levemir">Levemir</option>
                   <option value="Tresiba">Tresiba</option>
@@ -128,14 +128,14 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="startDate">Start Date</label>
               <div class="col-md-5">
-                <input class="form-control" id="startDate" type="date" name="startDate"
+                <input class="form-control form-control-sm" id="startDate" type="date" name="startDate"
                   placeholder="date" required [(ngModel)]="model.startDate" #name="ngModel">
               </div>
             </div>
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="endDate">End Date</label>
               <div class="col-md-5">
-                <input class="form-control" id="endDate" type="date" name="endDate"
+                <input class="form-control form-control-sm" id="endDate" type="date" name="endDate"
                  placeholder="date" required [(ngModel)]="model.endDate" #name="ngModel">
               </div>
             </div>
@@ -143,10 +143,10 @@
               <label class="col-md-4 col-form-label" for="rebate">Rebate</label>
               <div class="col-md-3">
                 <div class="input-group">
-                  <input id="rebate" name="rebate" class="form-control" size="12" type="text"
+                  <input id="rebate" name="rebate" class="form-control form-control-sm" size="12" type="text"
                   placeholder="" required [(ngModel)]="model.rebate" #name="ngModel">
                   <div class="input-group-append">
-                    <span class="input-group-text">%</span>
+                    <span class="form-control form-control-sm">%</span>
                   </div>
                 </div>
               </div>
@@ -154,7 +154,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="priceProtectionType">Price Protection Type</label>
               <div class="col-md-7">
-                <select id="priceProtectionType" name="priceProtectionType" class="form-control"
+                <select id="priceProtectionType" name="priceProtectionType" class="form-control form-control-sm"
                  required [(ngModel)]="model.priceProtectionType" #name="ngModel">
                   <option value="Cumulative">Cumulative</option>
                   <option value="Annual Reset">Annual Reset</option>
@@ -165,10 +165,10 @@
               <label class="col-md-4 col-form-label" for="priceProtectionThreshold">Price Protection Threshold</label>
               <div class="col-md-3">
                 <div class="input-group">
-                  <input id="priceProtectionThreshold" name="priceProtectionThreshold" class="form-control" size="12"
+                  <input id="priceProtectionThreshold" name="priceProtectionThreshold" class="form-control form-control-sm" size="12"
                    type="text" placeholder="" required [(ngModel)]="model.priceProtectionThreshold" #name="ngModel">
                   <div class="input-group-append">
-                    <span class="input-group-text">%</span>
+                      <span class="form-control form-control-sm">%</span>
                   </div>
                 </div>
               </div>
@@ -176,7 +176,7 @@
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="priceProtectionLookbackDate">Price Protection Lookback Date</label>
               <div class="col-md-5">
-                <input class="form-control" id="priceProtectionLookbackDate" type="date" name="priceProtectionLookbackDate" 
+                <input class="form-control form-control-sm" id="priceProtectionLookbackDate" type="date" name="priceProtectionLookbackDate" 
                 placeholder="date" required [(ngModel)]="model.priceProtectionLookbackDate" #name="ngModel">
               </div>
             </div>
@@ -184,10 +184,10 @@
               <label class="col-md-4 col-form-label" for="shareShift">Share Shift</label>
               <div class="col-md-3">
                 <div class="input-group">
-                  <input id="shareShift" name="shareShift" class="form-control" size="12" type="text"
+                  <input id="shareShift" name="shareShift" class="form-control form-control-sm" size="12" type="text"
                    placeholder="" required [(ngModel)]="model.shareShift" #name="ngModel">
                   <div class="input-group-append">
-                    <span class="input-group-text">%</span>
+                      <span class="form-control form-control-sm">%</span>
                   </div>
                 </div>
               </div>

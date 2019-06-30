@@ -37,15 +37,15 @@ export class InputComponent {
 
   onSubmit(form: NgForm): void {
 
-    if (this.validDateFormat()) {
+    // if (this.validDateFormat()) {
         this.submitted = true;
         console.log(form.value);
         this.model = form.value;
         this.inputService.save(this.model);
-    }
-    else {
-      alert('invalid date');
-    }
+    // }
+    // else {
+    //   alert('invalid date');
+    // }
   }
 
 

@@ -1,5 +1,6 @@
 export class Offer {
     
+    public offerId: number;
     public channel: string;
     public customer: string;
     public segment: string;

@@ -17,7 +17,11 @@ export class InputService {
   }
  
   public save(offer: Offer) {
-    console.log('saved');
-    return this.http.post<Offer>(this.offerUrl, offer);
+    
+    console.log(this.offerUrl);
+    console.log('reached save');
+    return this.http.post<Offer>(this.offerUrl + 'save', offer).subscribe(response => {
+      console.log(response);
+    });
   }
 }
