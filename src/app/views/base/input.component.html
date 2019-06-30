@@ -2,153 +2,156 @@
   <div class="row">
     <div class="col-md-6">
       <div class="card">
-          <form (ngSubmit)="onSubmit()" method="post" enctype="multipart/form-data" class="form-horizontal">
+          <div [hidden]="submitted">
+          <form (ngSubmit)="onSubmit(offerForm)" method="post" #offerForm="ngForm" enctype="multipart/form-data" class="form-horizontal">
         <div class="card-header">
           <strong>Input Offer Data</strong> - Inputs will be fed into statistical model
         </div>
         <div class="card-body">
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="select1">Channel</label>
+              <label class="col-md-4 col-form-label" for="channel">Channel</label>
               <div class="col-md-7">
-                <select id="select1" name="select1" class="form-control">
+                <select id="channel" name="channel" class="form-control" required [(ngModel)]="model.channel" #name="ngModel">
                   <option value="0">Please select channel</option>
-                  <option value="1">Commercial</option>
-                  <option value="2">Medicare Part D</option>
-                  <option value="3">Managed Medicaid</option>
-                  <option value="4">Health Insurance Exchange</option>
-                  <option value="5">Cash Card</option>
+                  <option value="Commercial">Commercial</option>
+                  <option value="Medicare Part D">Medicare Part D</option>
+                  <option value="Managed Medicaid">Managed Medicaid</option>
+                  <option value="Health Insurance Exchange">Health Insurance Exchange</option>
+                  <option value="Cash Card">Cash Card</option>
                 </select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="select2">Customer</label>
+              <label class="col-md-4 col-form-label" for="customer">Customer</label>
               <div class="col-md-7">
-                <select id="select2" name="select2" class="form-control">
+                <select id="customer" name="customer" class="form-control" required [(ngModel)]="model.customer" #name="ngModel">
                   <option value="0">Please select customer</option>
-                  <option value="1">CVS Caremark</option>
-                  <option value="2">Express Scripts Senior Care</option>
-                  <option value="3">Optum Rx</option>
-                  <option value="4">Humana</option>
-                  <option value="5">Prime</option>
-                  <option value="6">Envision</option>
-                  <option value="7">MagellanRx/option>
-                  <option value="8">Blue Cross Blue Shield Association</option>
-                  <option value="9">Kaiser Permanente</option>
-                  <option value="10">SilverScript
-                  <option value="11">Ascent</option>
+                  <option value="CVS Caremark">CVS Caremark</option>
+                  <option value="Express Scripts Senior Care">Express Scripts Senior Care</option>
+                  <option value="Optum Rx">Optum Rx</option>
+                  <option value="Humana">Humana</option>
+                  <option value="Prime">Prime</option>
+                  <option value="Envision">Envision</option>
+                  <option value="MagellanRx">MagellanRx</option>
+                  <option value="Blue Cross Blue Shield Association">Blue Cross Blue Shield Association</option>
+                  <option value="Kaiser Permanente">Kaiser Permanente</option>
+                  <option value="SilverScript">SilverScript</option>
+                  <option value="Ascent">Ascent</option>
                 </select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="select3">Segment/Plan</label>
+              <label class="col-md-4 col-form-label" for="segment">Segment/Plan</label>
               <div class="col-md-7">
-                <select id="select3" name="select3" class="form-control">
+                <select id="segment" name="segment" class="form-control" required [(ngModel)]="model.segment" #name="ngModel">
                   <option value="0">Please select segment/plan</option>
-                  <option value="1">FEP</option>
-                  <option value="2">Aetna</option>
-                  <option value="3">Template</option>
-                  <option value="4">Customs</option>
-                  <option value="5">ESI</option>
-                  <option value="6">Premier Access</option>
-                  <option value="7">Premier Performance</option>
-                  <option value="8">Choice & Value</option>
-                  <option value="9">All</option>
-                  <option value="10">Walmart</option>
-                  <option value="11">CalPERS</option>
-                  <option value="11">United Healthcare</option>
-                  <option value="12">Net Results</option>
+                  <option value="FEP">FEP</option>
+                  <option value="Aetna">Aetna</option>
+                  <option value="Template">Template</option>
+                  <option value="Customs">Customs</option>
+                  <option value="ESI">ESI</option>
+                  <option value="Premier Access">Premier Access</option>
+                  <option value="Premier Performance">Premier Performance</option>
+                  <option value="Choice & Value">Choice & Value</option>
+                  <option value="All">All</option>
+                  <option value="Walmart">Walmart</option>
+                  <option value="CalPERS">CalPERS</option>
+                  <option value="United Healthcare">United Healthcare</option>
+                  <option value="Net Results">Net Results</option>
                 </select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="select4">Brand or Manufacturer</label>
+              <label class="col-md-4 col-form-label" for="brandOrManufacturer">Brand or Manufacturer</label>
               <div class="col-md-7">
-                <select id="select4" name="select4" class="form-control">
+                <select id="brandOrManufacturer" name="brandOrManufacturer" class="form-control" required [(ngModel)]="model.brandOrManufacturer" #name="ngModel">
                   <option value="0">Please select option</option>
-                  <option value="1">Brand</option>
-                  <option value="2">Manufacturer</option>
+                  <option value="Brand">Brand</option>
+                  <option value="Manufacturer">Manufacturer</option>
                 </select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="select5">Tier</label>
+              <label class="col-md-4 col-form-label" for="tier">Tier</label>
               <div class="col-md-7">
-                <select id="select5" name="select5" class="form-control">
+                <select id="tier" name="tier" class="form-control" required [(ngModel)]="model.tier" #name="ngModel">
                   <option value="0">Please select tier</option>
-                  <option value="1">Tier 1 - Generic</option>
-                  <option value="2">Tier 2 - Preferred</option>
-                  <option value="3">Tier 3 - Non-Preferred</option>
-                  <option value="4">Tier 4 - Specialty</option>
+                  <option value="Tier 1 - Generic">Tier 1 - Generic</option>
+                  <option value="Tier 2 - Preferred">Tier 2 - Preferred</option>
+                  <option value="Tier 3 - Non-Preferred">Tier 3 - Non-Preferred</option>
+                  <option value="Tier 4 - Specialty">Tier 4 - Specialty</option>
                 </select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="select6">Placement</label>
+              <label class="col-md-4 col-form-label" for="placement">Placement</label>
               <div class="col-md-7">
-                <select id="select6" name="select6" class="form-control">
+                <select id="placement" name="placement" class="form-control" required [(ngModel)]="model.placement" #name="ngModel">
                   <option value="0">Please select placement</option>
-                  <option value="1">1 of 1</option>
-                  <option value="2">1 of 2</option>
-                  <option value="3">1 of 3</option>
-                  <option value="4">1 of Many</option>
-                  <option value="5">Exclusive</option>
+                  <option value="1 of 1">1 of 1</option>
+                  <option value="1 of 2">1 of 2</option>
+                  <option value="1 of 3">1 of 3</option>
+                  <option value="1 of Many">1 of Many</option>
+                  <option value="Exclusive">Exclusive</option>
                 </select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="textarea-input">Formulary</label>
+              <label class="col-md-4 col-form-label" for="formulary">Formulary</label>
               <div class="col-md-7">
-                <textarea id="textarea-input" name="textarea-input" rows="2" class="form-control"
-                  placeholder="Please enter formulary"></textarea>
+                <textarea id="formulary" name="formulary" rows="2" class="form-control"
+                  placeholder="Please enter formulary" required [(ngModel)]="model.formulary" #name="ngModel"></textarea>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="select7">Restriction</label>
+              <label class="col-md-4 col-form-label" for="restriction">Restriction</label>
               <div class="col-md-7">
-                <select id="select7" name="select7" class="form-control">
+                <select id="restriction" name="restriction" class="form-control" required [(ngModel)]="model.restriction" #name="ngModel">
                   <option value="0">Please select restriction</option>
-                  <option value="1">Unrestricted</option>
-                  <option value="2">Prior Authorization</option>
-                  <option value="3">1 Step Edit</option>
-                  <option value="4">2 Step Edit</option>
-                  <option value="5">NDC Block</option>
+                  <option value="Unrestricted">Unrestricted</option>
+                  <option value="Prior Authorization">Prior Authorization</option>
+                  <option value="1 Step Edit">1 Step Edit</option>
+                  <option value="2 Step Edit">2 Step Edit</option>
+                  <option value="NDC Block">NDC Block</option>
                 </select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="select8">Product</label>
+              <label class="col-md-4 col-form-label" for="product">Product</label>
               <div class="col-md-7">
-                <select id="select8" name="select8" class="form-control">
+                <select id="product" name="product" class="form-control" required [(ngModel)]="model.product" #name="ngModel">
                   <option value="0">Please select product</option>
-                  <option value="1">Levemir</option>
-                  <option value="2">Tresiba</option>
-                  <option value="3">NovoLog</option>
-                  <option value="4">Victoza</option>
-                  <option value="4">Ozempic</option>
-                  <option value="5">Saxenda</option>
-                  <option value="6">Norditropin</option>
-                  <option value="7">Novo-Seven</option>
+                  <option value="Levemir">Levemir</option>
+                  <option value="Tresiba">Tresiba</option>
+                  <option value="NovoLog">NovoLog</option>
+                  <option value="Victoza">Victoza</option>
+                  <option value="Ozempic">Ozempic</option>
+                  <option value="Saxenda">Saxenda</option>
+                  <option value="Norditropin">Norditropin</option>
+                  <option value="Novo-Seven">Novo-Seven</option>
                 </select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="start-date-input">Start Date</label>
+              <label class="col-md-4 col-form-label" for="startDate">Start Date</label>
               <div class="col-md-4">
-                <input class="form-control" id="start-date-input" type="date" name="start-date-input"
-                  placeholder="date">
+                <input class="form-control" id="startDate" type="date" name="startDate"
+                  placeholder="date" required [(ngModel)]="model.startDate" #name="ngModel">
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="end-date-input">End Date</label>
+              <label class="col-md-4 col-form-label" for="endDate">End Date</label>
               <div class="col-md-4">
-                <input class="form-control" id="end-date-input" type="date" name="end-date-input" placeholder="date">
+                <input class="form-control" id="endDate" type="date" name="endDate"
+                 placeholder="date" required [(ngModel)]="model.endDate" #name="ngModel">
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="rebate-input">Rebate</label>
+              <label class="col-md-4 col-form-label" for="rebate">Rebate</label>
               <div class="col-md-3">
                 <div class="input-group">
-                  <input id="rebate-input" class="form-control" size="12" type="text" placeholder="">
+                  <input id="rebate" name="rebate" class="form-control" size="12" type="text"
+                  placeholder="" required [(ngModel)]="model.rebate" #name="ngModel">
                   <div class="input-group-append">
                     <span class="input-group-text">%</span>
                   </div>
@@ -156,20 +159,22 @@
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="select9">Price Protection Type</label>
+              <label class="col-md-4 col-form-label" for="priceProtectionType">Price Protection Type</label>
               <div class="col-md-7">
-                <select id="select9" name="select9" class="form-control">
+                <select id="priceProtectionType" name="priceProtectionType" class="form-control"
+                 required [(ngModel)]="model.priceProtectionType" #name="ngModel">
                   <option value="0">Please select type</option>
-                  <option value="1">Cumulative</option>
-                  <option value="2">Annual Reset</option>
+                  <option value="Cumulative">Cumulative</option>
+                  <option value="Annual Reset">Annual Reset</option>
                 </select>
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="threshold-input">Price Protection Threshold</label>
+              <label class="col-md-4 col-form-label" for="priceProtectionThreshold">Price Protection Threshold</label>
               <div class="col-md-3">
                 <div class="input-group">
-                  <input id="threshold-input" class="form-control" size="12" type="text" placeholder="">
+                  <input id="priceProtectionThreshold" name="priceProtectionThreshold" class="form-control" size="12"
+                   type="text" placeholder="" required [(ngModel)]="model.priceProtectionThreshold" #name="ngModel">
                   <div class="input-group-append">
                     <span class="input-group-text">%</span>
                   </div>
@@ -177,17 +182,18 @@
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="lookback-date-input">Price Protection Lookback Date</label>
+              <label class="col-md-4 col-form-label" for="priceProtectionLookbackDate">Price Protection Lookback Date</label>
               <div class="col-md-4">
-                <input class="form-control" id="lookback-date-input" type="date" name="lookback-date-input"
-                  placeholder="date">
+                <input class="form-control" id="priceProtectionLookbackDate" type="date" name="priceProtectionLookbackDate" 
+                placeholder="date" required [(ngModel)]="model.priceProtectionLookbackDate" #name="ngModel">
               </div>
             </div>
             <div class="form-group row">
-              <label class="col-md-4 col-form-label" for="share-shift-input">Share Shift</label>
+              <label class="col-md-4 col-form-label" for="shareShift">Share Shift</label>
               <div class="col-md-3">
                 <div class="input-group">
-                  <input id="share-shift-input" class="form-control" size="12" type="text" placeholder="">
+                  <input id="shareShift" name="shareShift" class="form-control" size="12" type="text"
+                   placeholder="" required [(ngModel)]="model.shareShift" #name="ngModel">
                   <div class="input-group-append">
                     <span class="input-group-text">%</span>
                   </div>
@@ -200,6 +206,7 @@
           <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
         </div>
       </form>
+      </div>
       </div>
     </div>
   </div>

@@ -1,11 +1,19 @@
 import { Component } from '@angular/core';
+import { Offer } from './offer';
+import { NgForm } from '@angular/forms';
 
 @Component({
   templateUrl: 'input.component.html'
 })
 export class InputComponent {
 
-  constructor() { }
+  public model = new Offer();
+  public submitted = false;
+
+  constructor(
+) { 
+  this.model.channel = "aaa"
+}
 
   isCollapsed: boolean = false;
   iconCollapse: string = 'icon-arrow-up';
@@ -23,8 +31,11 @@ export class InputComponent {
     this.iconCollapse = this.isCollapsed ? 'icon-arrow-down' : 'icon-arrow-up';
   }
 
-  onSubmit(): void {
-    alert("data sent");
+  onSubmit(form: NgForm): void {
+    this.submitted = true;
+    console.log(form.value);
+    this.model.channel = form.value;
+    console.log(JSON.stringify(this.model.channel));
   }
 
 }
