@@ -12,7 +12,6 @@
               <label class="col-md-4 col-form-label" for="channel">Channel</label>
               <div class="col-md-7">
                 <select id="channel" name="channel" class="form-control" required [(ngModel)]="model.channel" #name="ngModel">
-                  <option value="0">Please select channel</option>
                   <option value="Commercial">Commercial</option>
                   <option value="Medicare Part D">Medicare Part D</option>
                   <option value="Managed Medicaid">Managed Medicaid</option>
@@ -25,7 +24,6 @@
               <label class="col-md-4 col-form-label" for="customer">Customer</label>
               <div class="col-md-7">
                 <select id="customer" name="customer" class="form-control" required [(ngModel)]="model.customer" #name="ngModel">
-                  <option value="0">Please select customer</option>
                   <option value="CVS Caremark">CVS Caremark</option>
                   <option value="Express Scripts Senior Care">Express Scripts Senior Care</option>
                   <option value="Optum Rx">Optum Rx</option>
@@ -44,7 +42,6 @@
               <label class="col-md-4 col-form-label" for="segment">Segment/Plan</label>
               <div class="col-md-7">
                 <select id="segment" name="segment" class="form-control" required [(ngModel)]="model.segment" #name="ngModel">
-                  <option value="0">Please select segment/plan</option>
                   <option value="FEP">FEP</option>
                   <option value="Aetna">Aetna</option>
                   <option value="Template">Template</option>
@@ -65,7 +62,6 @@
               <label class="col-md-4 col-form-label" for="brandOrManufacturer">Brand or Manufacturer</label>
               <div class="col-md-7">
                 <select id="brandOrManufacturer" name="brandOrManufacturer" class="form-control" required [(ngModel)]="model.brandOrManufacturer" #name="ngModel">
-                  <option value="0">Please select option</option>
                   <option value="Brand">Brand</option>
                   <option value="Manufacturer">Manufacturer</option>
                 </select>
@@ -75,7 +71,6 @@
               <label class="col-md-4 col-form-label" for="tier">Tier</label>
               <div class="col-md-7">
                 <select id="tier" name="tier" class="form-control" required [(ngModel)]="model.tier" #name="ngModel">
-                  <option value="0">Please select tier</option>
                   <option value="Tier 1 - Generic">Tier 1 - Generic</option>
                   <option value="Tier 2 - Preferred">Tier 2 - Preferred</option>
                   <option value="Tier 3 - Non-Preferred">Tier 3 - Non-Preferred</option>
@@ -87,7 +82,6 @@
               <label class="col-md-4 col-form-label" for="placement">Placement</label>
               <div class="col-md-7">
                 <select id="placement" name="placement" class="form-control" required [(ngModel)]="model.placement" #name="ngModel">
-                  <option value="0">Please select placement</option>
                   <option value="1 of 1">1 of 1</option>
                   <option value="1 of 2">1 of 2</option>
                   <option value="1 of 3">1 of 3</option>
@@ -107,7 +101,6 @@
               <label class="col-md-4 col-form-label" for="restriction">Restriction</label>
               <div class="col-md-7">
                 <select id="restriction" name="restriction" class="form-control" required [(ngModel)]="model.restriction" #name="ngModel">
-                  <option value="0">Please select restriction</option>
                   <option value="Unrestricted">Unrestricted</option>
                   <option value="Prior Authorization">Prior Authorization</option>
                   <option value="1 Step Edit">1 Step Edit</option>
@@ -134,14 +127,14 @@
             </div>
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="startDate">Start Date</label>
-              <div class="col-md-4">
+              <div class="col-md-5">
                 <input class="form-control" id="startDate" type="date" name="startDate"
                   placeholder="date" required [(ngModel)]="model.startDate" #name="ngModel">
               </div>
             </div>
             <div class="form-group row">
               <label class="col-md-4 col-form-label" for="endDate">End Date</label>
-              <div class="col-md-4">
+              <div class="col-md-5">
                 <input class="form-control" id="endDate" type="date" name="endDate"
                  placeholder="date" required [(ngModel)]="model.endDate" #name="ngModel">
               </div>
@@ -163,7 +156,6 @@
               <div class="col-md-7">
                 <select id="priceProtectionType" name="priceProtectionType" class="form-control"
                  required [(ngModel)]="model.priceProtectionType" #name="ngModel">
-                  <option value="0">Please select type</option>
                   <option value="Cumulative">Cumulative</option>
                   <option value="Annual Reset">Annual Reset</option>
                 </select>
