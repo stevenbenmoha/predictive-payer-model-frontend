@@ -41,16 +41,13 @@ export class InputComponent {
         this.submitted = true;
         console.log(form.value);
         this.model = form.value;
-        this.inputService.save(this.model).subscribe(result => this.goToOfferList);
+        this.inputService.save(this.model);
     }
     else {
       alert('invalid date');
     }
   }
 
-  goToOfferList() {
-    this.router.navigate(['/offers']);
-  }
 
   validDateFormat(): any {
     if (moment(this.model.startDate, 'YYYY-MM-DD', true).isValid() &&
