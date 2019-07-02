@@ -6,7 +6,8 @@ import { InputService } from './input.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  templateUrl: 'input.component.html'
+  templateUrl: 'input.component.html',
+  styleUrls: ['input.component.scss'],
 })
 export class InputComponent {
 
