@@ -2,19 +2,19 @@ import { Component } from '@angular/core';
 import { Offer } from './offer';
 import { NgForm } from '@angular/forms';
 import * as moment from 'moment';
-import { InputService } from './input.service';
+import { OfferService } from './offer.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-  templateUrl: 'input.component.html',
-  styleUrls: ['input.component.scss'],
+  templateUrl: 'offer.component.html',
+  styleUrls: ['offer.component.scss'],
 })
-export class InputComponent {
+export class OfferComponent {
 
   public model = new Offer();
   public submitted = false;
 
-  constructor(private inputService: InputService,
+  constructor(private offerService: OfferService,
               private route: ActivatedRoute,
               private router: Router,) {
 
@@ -42,7 +42,7 @@ export class InputComponent {
         this.submitted = true;
         console.log(form.value);
         this.model = form.value;
-        this.inputService.save(this.model);
+        this.offerService.save(this.model);
     // }
     // else {
     //   alert('invalid date');

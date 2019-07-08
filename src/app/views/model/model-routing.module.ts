@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { InputComponent } from './input.component';
+import { OfferComponent } from './offer/offer.component';
+import { ResultComponent } from './result/result.component';
 
 const routes: Routes = [
   {
@@ -16,10 +17,14 @@ const routes: Routes = [
       },
       {
         path: 'input',
-        component: InputComponent,
+        component: OfferComponent,
         data: {
           title: 'Input'
         }
+      },
+      {
+        path: 'result',
+        component: ResultComponent
       }
     ]
   }
@@ -29,4 +34,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class BaseRoutingModule {}
+export class ModelRoutingModule {}

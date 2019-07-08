@@ -37,7 +37,7 @@ import { AppRoutingModule } from './app.routing';
 import { BsDropdownModule } from 'ngx-bootstrap/dropdown';
 import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
-import { InputService } from './views/base/input.service';
+import { OfferService } from './views/model/offer/offer.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -65,7 +65,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     provide: LocationStrategy,
     useClass: HashLocationStrategy
   },
-    InputService,
+    OfferService,
     HttpClient],
   bootstrap: [ AppComponent ]
 })

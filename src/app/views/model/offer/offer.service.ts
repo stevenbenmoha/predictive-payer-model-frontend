@@ -4,7 +4,7 @@ import { Offer } from './offer';
 import { Observable } from 'rxjs';
  
 @Injectable()
-export class InputService {
+export class OfferService {
  
   private offerUrl: string;
  

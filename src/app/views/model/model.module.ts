@@ -5,7 +5,9 @@ import { NgModule } from '@angular/core';
 
 
 // Forms Component
-import { InputComponent } from './input.component';
+import { OfferComponent } from './offer/offer.component';
+
+import { ResultComponent } from './result/result.component';
 
 // Tabs Component
 import { TabsModule } from 'ngx-bootstrap/tabs';
@@ -33,13 +35,13 @@ import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
 
 // Components Routing
-import { BaseRoutingModule } from './base-routing.module';
+import { ModelRoutingModule } from './model-routing.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    BaseRoutingModule,
+    ModelRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule,
     CarouselModule.forRoot(),
@@ -50,7 +52,8 @@ import { BaseRoutingModule } from './base-routing.module';
     TooltipModule.forRoot()
   ],
   declarations: [
-    InputComponent
+    OfferComponent,
+    ResultComponent
   ]
 })
-export class BaseModule { }
+export class ModelModule { }
