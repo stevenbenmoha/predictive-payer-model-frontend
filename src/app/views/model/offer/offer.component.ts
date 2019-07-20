@@ -43,6 +43,7 @@ export class OfferComponent {
         console.log(form.value);
         this.model = form.value;
         this.offerService.save(this.model);
+        this.router.navigateByUrl("/model/result");
     // }
     // else {
     //   alert('invalid date');

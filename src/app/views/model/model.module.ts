@@ -53,7 +53,7 @@ import { ModelRoutingModule } from './model-routing.module';
   ],
   declarations: [
     OfferComponent,
-    ResultComponent
+    ResultComponent,
   ]
 })
 export class ModelModule { }
