@@ -28,7 +28,7 @@ export const routes: Routes = [
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
       },
       {
-        path: 'history',
+        path: 'decision',
         loadChildren: () => import('./views/history/history.module').then(m => m.HistoryModule)
       }
     ]

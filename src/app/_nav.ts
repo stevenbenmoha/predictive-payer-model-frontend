@@ -57,7 +57,7 @@ export const navItems: NavData[] = [
     icon: 'icon-chart',
     children: [
       {
-        name: 'Simulation Store',
+        name: 'History',
         url: '/decision/history',
         icon: 'icon-graph'
       }

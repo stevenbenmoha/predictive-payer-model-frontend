@@ -15,10 +15,10 @@ const routes: Routes = [
         redirectTo: 'Dashboard'
       },
       {
-        path: '/history',
+        path: 'history',
         component: StoreComponent,
         data: {
-          title: 'Simulation Store'
+          title: 'History'
       }
     }
     ]
