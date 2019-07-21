@@ -17,5 +17,6 @@ export class Offer {
     public priceProtectionThreshold: number;
     public priceProtectionLookbackDate: Date;
     public shareShift: number;
+    public result: string;
 
 }

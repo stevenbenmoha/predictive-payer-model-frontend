@@ -210,18 +210,18 @@
       <div class="col-md-12">
         <div class="card">
             <div [hidden]="submitted">
-            <form (ngSubmit)="onSubmit(offerForm)" method="post" #offerForm="ngForm" enctype="multipart/form-data" class="form-horizontal">
+            <form (ngSubmit)="onSubmit(null)" method="post" #offerUpload="ngForm" enctype="multipart/form-data" class="form-horizontal">
           <div class="card-header" style="text-align:center;">
             <h4 style="margin: 0;"><strong>Input Offer CSV </strong> - Inputs will be fed into statistical model </h4>
           </div>
           <div class="card-body">
               <div class="form-group row">
                   <div class="col-md-10">
-                  <p style="padding-left: 100px;"> Upload .csv file containing offer data for batch processing</p>
+                  <p style="padding-left: 150px;"> Upload .csv file containing offer data for batch processing</p>
                   </div>
                   </div> 
               <div class="form-group row">
-                <div class="col-md-7" style="padding-left:300px;">
+                <div class="col-md-7" style="padding-left:480px;">
                 <button mat-raised-button style="width: 100px; height: 30px;">Select file</button>
                 </div>
               </div>
