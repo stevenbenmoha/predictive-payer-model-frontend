@@ -1,11 +1,13 @@
-<div class="animated fadeIn">
+<div style="width: 100%; display: table;">
+<div style="display: table-row">
+<div class="animated fadeIn" style="width: 700px; display: table-cell;">
   <div class="row">
-    <div class="col-md-6">
+    <div class="col-md-12">
       <div class="card">
           <div [hidden]="submitted">
           <form (ngSubmit)="onSubmit(offerForm)" method="post" #offerForm="ngForm" enctype="multipart/form-data" class="form-horizontal">
         <div class="card-header">
-          <strong>Input Offer Data</strong> - Inputs will be fed into statistical model
+          <h4><strong>Input Offer Data</strong> - Inputs will be fed into statistical model </h4>
         </div>
         <div class="card-body">
             <div class="form-group row">
@@ -201,5 +203,38 @@
       </div>
       </div>
     </div>
+  </div>
+</div>
+<div class="animated fadeIn" style="width: 700px; display: table-cell; padding-top: 34px;">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+            <div [hidden]="submitted">
+            <form (ngSubmit)="onSubmit(offerForm)" method="post" #offerForm="ngForm" enctype="multipart/form-data" class="form-horizontal">
+          <div class="card-header" style="text-align:center;">
+            <strong>Input Offer CSV </strong> - Inputs will be fed into statistical model
+          </div>
+          <div class="card-body">
+              <div class="form-group row">
+                  <div class="col-md-10">
+                  <p style="padding-left: 100px;"> Upload .csv file containing offer data for batch processing</p>
+                  </div>
+                  </div> 
+              <div class="form-group row">
+                <div class="col-md-7" style="padding-left:300px;">
+                <button mat-raised-button style="width: 100px; height: 30px;">Select file</button>
+                </div>
+              </div>
+            </div>
+          <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Upload</button>
+            <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Clear file</button>
+          </div>
+        </form>
+        </div>
+        </div>
+      </div>
+    </div>
+  </div>
   </div>
 </div>

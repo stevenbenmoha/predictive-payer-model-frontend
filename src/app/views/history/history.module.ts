@@ -3,12 +3,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 
-
-// Forms Component
-import { OfferComponent } from './offer/offer.component';
-
-import { ResultComponent } from './result/result.component';
-
 // Tabs Component
 import { TabsModule } from 'ngx-bootstrap/tabs';
 
@@ -33,16 +27,16 @@ import { ProgressbarModule } from 'ngx-bootstrap/progressbar';
 // Tooltip Component
 import { TooltipModule } from 'ngx-bootstrap/tooltip';
 
-
 // Components Routing
-import { ModelRoutingModule } from './model-routing.module';
+import { HistoryRoutingModule } from './history-routing.module'
+import { StoreComponent } from '../history/store/store.component';
 
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
-    ModelRoutingModule,
+    HistoryRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule,
     CarouselModule.forRoot(),
@@ -53,8 +47,7 @@ import { ModelRoutingModule } from './model-routing.module';
     TooltipModule.forRoot()
   ],
   declarations: [
-    OfferComponent,
-    ResultComponent
+    StoreComponent
   ]
 })
-export class ModelModule { }
+export class HistoryModule { }

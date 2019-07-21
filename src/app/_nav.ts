@@ -53,12 +53,12 @@ export const navItems: NavData[] = [
   },
   {
     name: 'Analytics',
-    url: '/charts',
+    url: '/decision',
     icon: 'icon-chart',
     children: [
       {
-        name: 'Placeholder',
-        url: '  ',
+        name: 'Simulation Store',
+        url: '/decision/history',
         icon: 'icon-graph'
       }
     ]

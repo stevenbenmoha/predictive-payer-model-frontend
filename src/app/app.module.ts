@@ -39,6 +39,7 @@ import { TabsModule } from 'ngx-bootstrap/tabs';
 import { ChartsModule } from 'ng2-charts';
 import { OfferService } from './views/model/offer/offer.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { StoreComponent } from './views/history/store/store.component';
 
 @NgModule({
   imports: [

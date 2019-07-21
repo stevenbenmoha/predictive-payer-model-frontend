@@ -26,6 +26,10 @@ export const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: () => import('./views/dashboard/dashboard.module').then(m => m.DashboardModule)
+      },
+      {
+        path: 'history',
+        loadChildren: () => import('./views/history/history.module').then(m => m.HistoryModule)
       }
     ]
   },

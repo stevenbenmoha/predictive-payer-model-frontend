@@ -1,4 +1,4 @@
-import { Injectable, OnInit } from '@angular/core';
+/* import { Injectable, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Offer } from './../offer/offer';
 import * as tf from '@tensorflow/tfjs';
@@ -42,4 +42,4 @@ export class ModelService implements OnInit {
     predict(val) {
       // todo
     }
-}
+} */

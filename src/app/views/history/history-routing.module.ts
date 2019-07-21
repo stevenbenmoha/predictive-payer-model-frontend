@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-import { OfferComponent } from './offer/offer.component';
-import { ResultComponent } from './result/result.component';
+import { StoreComponent } from './store/store.component'
 
 const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Predictive Model'
+      title: 'Analytics'
     },
     children: [
       {
@@ -16,16 +15,12 @@ const routes: Routes = [
         redirectTo: 'Dashboard'
       },
       {
-        path: 'input',
-        component: OfferComponent,
+        path: '/history',
+        component: StoreComponent,
         data: {
-          title: 'Input'
-        }
-      },
-      {
-        path: 'result',
-        component: ResultComponent
+          title: 'Simulation Store'
       }
+    }
     ]
   }
 ];
@@ -34,4 +29,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class ModelRoutingModule {}
+export class HistoryRoutingModule {}
